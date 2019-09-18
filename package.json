@@ -25,8 +25,5 @@
   "bugs": {
     "url": "https://github.com/doc88git/flux-validator-js/issues"
   },
-  "homepage": "https://github.com/doc88git/flux-validator-js#readme",
-  "dependencies": {
-    "np": "^5.1.0"
-  }
+  "homepage": "https://github.com/doc88git/flux-validator-js#readme"
 }
