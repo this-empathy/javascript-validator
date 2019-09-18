@@ -20,8 +20,8 @@
     "cnh",
     "renavam"
   ],
-  "author": "Lucas Yarid",
-  "license": "ISC",
+  "author": "Lucas Yarid & Giovanni Spolidorio",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/doc88git/flux-validator-js/issues"
   },
