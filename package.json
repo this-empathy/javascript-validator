@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/doc88git/flux-validator-js/issues"
   },
-  "homepage": "https://github.com/doc88git/flux-validator-js#readme"
+  "homepage": "https://github.com/doc88git/flux-validator-js#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
