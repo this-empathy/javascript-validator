@@ -1,0 +1,29 @@
+{
+  "name": "flux-validator-js",
+  "version": "1.0.0",
+  "description": "A package to validate strings and input data with vanilla js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doc88git/flux-validator-js.git"
+  },
+  "keywords": [
+    "validate",
+    "js",
+    "javascript",
+    "regex",
+    "cpf",
+    "cnpj",
+    "cnh",
+    "renavam"
+  ],
+  "author": "Lucas Yarid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doc88git/flux-validator-js/issues"
+  },
+  "homepage": "https://github.com/doc88git/flux-validator-js#readme"
+}
