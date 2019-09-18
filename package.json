@@ -1,6 +1,6 @@
 {
-  "name": "flux-validator-js",
-  "version": "1.0.0",
+  "name": "@doc88/flux-validator-js",
+  "version": "1.0.1",
   "description": "A package to validate strings and input data with vanilla js",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/doc88git/flux-validator-js/issues"
   },
-  "homepage": "https://github.com/doc88git/flux-validator-js#readme"
+  "homepage": "https://github.com/doc88git/flux-validator-js#readme",
+  "dependencies": {
+    "np": "^5.1.0"
+  }
 }
