@@ -34,5 +34,6 @@ export default (name, value) => {
     return field
   }
 
+  field.valid = true
   return field
 }
