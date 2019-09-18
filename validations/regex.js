@@ -1,13 +1,10 @@
-let field = {
-  name: null,
-  valid: false
-}
- 
 export default (name, value, regex) => {
   var re = new RegExp(regex,'g')
+  let field = {
+    name: name,
+    valid: false
+  }
 
-  field.name = name
   field.valid = re.test(String(value))
-  
   return field
 }

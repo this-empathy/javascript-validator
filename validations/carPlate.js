@@ -2,12 +2,12 @@ import utils from "../utils/utils";
 import letter from "./letter";
 import number from "./number";
 
-let field = {
-  name: null,
-  valid: false
-}
-export default (name, value) => {    
-  field.name = name
+
+export default (name, value) => {
+  let field = {
+    name: name,
+    valid: false
+  }
 
   let plate = value.replace('-', '')
   plate = utils.removeWhiteSpace(plate)

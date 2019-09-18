@@ -1,12 +1,10 @@
 import utils from "../utils/utils";
 
-let field = {
-  name: null,
-  valid: false
-}
- 
 export default (name, value) => {
-  field.name = name
+  let field = {
+    name: name,
+    valid: false
+  }
 
   let cnpj = utils.removeSpecialChars(value)
   cnpj = utils.removeWhiteSpace(cnpj)
