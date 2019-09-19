@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1568899701540" clover="3.2.0">
+  <project timestamp="1568899701541" name="All files">
+    <metrics statements="185" coveredstatements="185" conditionals="73" coveredconditionals="73" methods="22" coveredmethods="22" elements="280" coveredelements="280" complexity="0" loc="185" ncloc="185" packages="2" files="17" classes="17"/>
+    <package name="utils">
+      <metrics statements="37" coveredstatements="37" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+      <file name="utils.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/utils/utils.js">
+        <metrics statements="37" coveredstatements="37" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+        <line num="1" count="17" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="48" type="stmt"/>
+        <line num="9" count="48" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="80" type="stmt"/>
+        <line num="23" count="142" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="141" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="24" type="stmt"/>
+      </file>
+    </package>
+    <package name="validations">
+      <metrics statements="148" coveredstatements="148" conditionals="69" coveredconditionals="69" methods="17" coveredmethods="17"/>
+      <file name="carPlate.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/carPlate.js">
+        <metrics statements="19" coveredstatements="19" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+        <line num="7" count="14" type="stmt"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="15" count="14" type="cond" truecount="4" falsecount="0"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="19" count="11" type="stmt"/>
+        <line num="20" count="11" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+        <line num="22" count="11" type="stmt"/>
+        <line num="24" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+        <line num="38" count="6" type="stmt"/>
+      </file>
+      <file name="cep.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/cep.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+      </file>
+      <file name="cnh.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/cnh.js">
+        <metrics statements="19" coveredstatements="19" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="11" count="9" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="16" count="63" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="27" count="63" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="31" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="7" type="stmt"/>
+        <line num="34" count="7" type="stmt"/>
+      </file>
+      <file name="cnpj.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/cnpj.js">
+        <metrics statements="21" coveredstatements="21" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>
+        <line num="4" count="25" type="stmt"/>
+        <line num="9" count="25" type="stmt"/>
+        <line num="10" count="25" type="stmt"/>
+        <line num="12" count="25" type="cond" truecount="4" falsecount="0"/>
+        <line num="13" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="19" count="9" type="stmt"/>
+        <line num="20" count="18" type="stmt"/>
+        <line num="21" count="18" type="stmt"/>
+        <line num="22" count="18" type="stmt"/>
+        <line num="23" count="18" type="stmt"/>
+        <line num="25" count="18" type="stmt"/>
+        <line num="26" count="225" type="stmt"/>
+        <line num="27" count="225" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="18" type="stmt"/>
+        <line num="31" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="9" type="stmt"/>
+      </file>
+      <file name="cpf.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/cpf.js">
+        <metrics statements="19" coveredstatements="19" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
+        <line num="4" count="26" type="stmt"/>
+        <line num="9" count="26" type="stmt"/>
+        <line num="10" count="26" type="stmt"/>
+        <line num="12" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="17" type="stmt"/>
+        <line num="19" count="17" type="stmt"/>
+        <line num="20" count="153" type="stmt"/>
+        <line num="22" count="17" type="stmt"/>
+        <line num="24" count="17" type="cond" truecount="4" falsecount="0"/>
+        <line num="25" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="10" type="stmt"/>
+        <line num="28" count="10" type="stmt"/>
+        <line num="29" count="100" type="stmt"/>
+        <line num="31" count="10" type="stmt"/>
+        <line num="33" count="10" type="cond" truecount="4" falsecount="0"/>
+        <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="9" type="stmt"/>
+        <line num="37" count="9" type="stmt"/>
+      </file>
+      <file name="cpfCnpj.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/cpfCnpj.js">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="15" type="stmt"/>
+        <line num="10" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="15" type="stmt"/>
+      </file>
+      <file name="date.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/date.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+      </file>
+      <file name="email.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/email.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="15" type="stmt"/>
+        <line num="3" count="15" type="stmt"/>
+        <line num="7" count="15" type="stmt"/>
+        <line num="8" count="15" type="stmt"/>
+      </file>
+      <file name="fileSize.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/fileSize.js">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+      </file>
+      <file name="fileType.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/fileType.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+      </file>
+      <file name="letter.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/letter.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="18" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
+        <line num="10" count="18" type="stmt"/>
+        <line num="11" count="18" type="stmt"/>
+        <line num="12" count="18" type="stmt"/>
+      </file>
+      <file name="number.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/number.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="23" type="stmt"/>
+        <line num="9" count="23" type="stmt"/>
+        <line num="10" count="23" type="stmt"/>
+        <line num="12" count="23" type="stmt"/>
+        <line num="13" count="23" type="stmt"/>
+      </file>
+      <file name="phone.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/phone.js">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+      </file>
+      <file name="regex.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/regex.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+      </file>
+      <file name="renavam.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/renavam.js">
+        <metrics statements="20" coveredstatements="20" conditionals="11" coveredconditionals="11" methods="1" coveredmethods="1"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="12" count="7" type="cond" truecount="4" falsecount="0"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="16" type="stmt"/>
+        <line num="21" count="16" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="25" count="4" type="cond" truecount="5" falsecount="0"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="31" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+      </file>
+      <file name="required.js" path="/Users/giovanni.spolidorio/Documents/Projects/Flux/flux-validator-js/validations/required.js">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="9" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="14" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="19" count="9" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
