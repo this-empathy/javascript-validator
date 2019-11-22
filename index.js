@@ -8,6 +8,7 @@ import date from './validations/date';
 import email from './validations/email';
 import fileSize from './validations/fileSize';
 import fileType from './validations/fileType';
+import fileTypeCsv from './validations/fileTypeCsv';
 import letter from './validations/letter';
 import number from './validations/number';
 import phone from './validations/phone';
@@ -26,6 +27,7 @@ export default {
   email,
   fileSize,
   fileType,
+  fileTypeCsv,
   letter,
   number,
   phone,
