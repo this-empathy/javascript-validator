@@ -104,6 +104,13 @@ Ex: jpg|svg|jpeg|png|bmp|gi
 Validator.fileType(files)
 ```
 
+##### File Type Csv
+Ex: csv
+
+```javascript
+Validator.fileTypeCsv(files)
+```
+
 ##### Numbers
 Ex: 0123456
 

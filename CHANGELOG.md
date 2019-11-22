@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.9] - 2019-11-22
+### Added
+- fileTypeCsv
+### Changed
+### Removed
+- package-lock.json
+
 ## [1.0.7] - 2019-09-19
 ### Added
 - CHANGELOG
