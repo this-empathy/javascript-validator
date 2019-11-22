@@ -1,4 +1,4 @@
-import carPlate from './validations/carPlate'
+import carPlate from './validations/carPlate';
 import cep from './validations/cep';
 import cnh from './validations/cnh';
 import cnpj from './validations/cnpj';
