@@ -43,6 +43,7 @@ Validator.carPlate(inputName, value)
 
 ##### Brazilian CEP
 Ex: 00000-000
+Ex: 00000000
 
 ```javascript
 Validator.cep(inputName, value)
