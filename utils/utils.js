@@ -6,7 +6,7 @@ export default{
 
     for (const char in substitionDict) {
       let pattern = new RegExp(char, 'g')
-      text = text.replace(pattern, substitionDict[char])
+      text = text.toString().replace(pattern, substitionDict[char])
     }
     return text
   },
@@ -16,12 +16,12 @@ export default{
   },
 
   removeSpecialChars(text) {
-    return text.replace(/[^a-zA-Z 0-9]+/g, '')
+    return text.toString().replace(/[^a-zA-Z 0-9]+/g, '')
   },
 
   removeWhiteSpace(text) {
     if (!text) return ''
-    return text.trim().replace(/\s+/g, '')
+    return text.toString().trim().replace(/\s+/g, '')
   },
 
   _initDict() {
