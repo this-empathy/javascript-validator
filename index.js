@@ -15,6 +15,7 @@ import phone from './validations/phone';
 import regex from './validations/regex';
 import renavam from './validations/renavam';
 import required from './validations/required';
+import age from './validations/age';
 
 export default { 
   carPlate,
@@ -33,5 +34,6 @@ export default {
   phone,
   regex,
   renavam,
-  required
+  required,
+  age
 }
