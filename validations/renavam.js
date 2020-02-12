@@ -6,33 +6,18 @@ export default (name, value) => {
     valid: false
   }
 
-  let renavam = utils.removeSpecialChars(value)
-  renavam = utils.removeWhiteSpace(renavam)
+  let renavam = utils.removeWhiteSpace(value)
+  
+  let digit = 0
+  const pattern = '3298765432';
 
-  if (renavam.length > 11 || renavam.length < 11) return field
-
-  renavam = renavam.split('')
-  let sum = 0,
-    localValue = 0,
-    digit = 0,
-    x = 0
-  for (let i = 5; i >= 2; i--) {
-    sum += renavam[x] * i
-    x++
-  }
-  localValue = sum % 11
-
-  if (localValue === 11 || localValue === 0 || localValue >= 10) {
-    digit = 0
-  } else {
-    digit = localValue
+  for (var i = 0; i < 10; i++){
+    digit += renavam[i] * pattern[i];
   }
 
-  if (digit === parseInt(renavam[4])) {
-    field.valid = false
-  } else {
-    field.valid = true
-  }
+  digit = (digit * 10) % 11;
+  digit = digit !== 10 ? digit : 0;
 
+  field.valid = digit === parseInt(renavam[10], 10)
   return field
 }
