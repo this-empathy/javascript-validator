@@ -6,8 +6,12 @@ export default (name, value) => {
     valid: false
   }
 
+  if (value.length < 8) return field
+
+  const totalLength = 11
   let renavam = utils.removeWhiteSpace(value)
-  
+  renavam = renavam.length < totalLength ? renavam.padStart(totalLength, '0') : renavam
+
   let digit = 0
   const pattern = '3298765432';
 
