@@ -5,11 +5,6 @@ export default (name, {value, condition, age}) => {
     name: name,
     valid: false
   }
-
-  console.log('age', value, condition, age);
-  
-
   // '===', '>=', '<=', '<', '>', '!=='
-
   return field
 }

@@ -1,35 +1,35 @@
 import utils from "../utils/utils";
- 
+
 export default (name, value) => {
+
+  const cnhCalc = function(partial) {
+    let s = 0
+    for (let i = 0 , j = 2; i < partial.length ; i++, j++) {
+        s += parseInt(partial[i]) * j
+    }
+
+    const leftover = s % 11
+    return (leftover <= 1) ? 0 : (11 - leftover);
+  }
+
+  const re = /^[0-9]*$/
+
   let field = {
     name: name,
     valid: false
   }
-  let cnh = utils.removeSpecialChars(value)
-  cnh = utils.removeWhiteSpace(cnh)
+
+  let cnh = utils.removeWhiteSpace(value)
 
   if (cnh.length > 11 || cnh.length <= 3) return field
-  if (/^(\d)\1+$/.test(cnh)) return field
+  if (!re.test(cnh)) return field
 
-  let v = 0
-  for (let i = 0, j = 9; i < 9; ++i, --j) {
-    v += +(cnh.charAt(i) * j)
-  }
+  const partial = value.substr(0, 9)
+  
+  const dv1 = cnhCalc(partial);
+  const dv2 = cnhCalc(dv1 + partial);
 
-  let dsc = 0, vl1 = v % 11    
-  if (vl1 >= 10) {
-    vl1 = 0
-    dsc = 2
-  }
-
-  v = 0
-  for (let i = 0, j = 1; i < 9; ++i, ++j) {
-    v += +(cnh.charAt(i) * j)
-  }
-
-  var x = v % 11
-  var vl2 = x >= 10 ? 0 : x - dsc
-
-  field.valid = '' + vl1 + vl2 === cnh.substr(-2)
+  field.valid = '' + dv1 + dv2 === value.substr(-2);
+  
   return field
 }
