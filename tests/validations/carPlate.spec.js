@@ -8,7 +8,10 @@ describe('CAR Plate', () => {
       'NET-5886',
       'HOP-3D78',
       'JJJ-7V66',
-      'MER-1C26'
+      'MER-1C26',
+      'CAS3S22',
+      'FBI0D52',
+      'CAS-3S22'
     ];
 
     const invalid = [
