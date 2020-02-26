@@ -14,6 +14,7 @@ export default (name, value) => {
   card = utils.removeWhiteSpace(card)
 
   console.log(utils.luhn10(card));
+
   
 
   //TODO Get card company

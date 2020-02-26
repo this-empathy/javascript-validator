@@ -1,3 +1,5 @@
+import cardTypes from '../utils/card-types'
+
 var substitionDict = null
 
 export default{
@@ -43,6 +45,15 @@ export default{
     }
 
     return sum % 10 === 0
+  },
+
+  clone(originalObject){
+    let dupe
+    if (!originalObject) return null
+
+    dupe = JSON.parse(JSON.stringify(originalObject))
+
+    return dupe
   },
 
   _initDict() {
