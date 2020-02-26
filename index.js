@@ -17,6 +17,8 @@ import renavam from './validations/renavam';
 import required from './validations/required';
 import age from './validations/age';
 import creditCard from './validations/creditCard';
+import creditCardDate from './validations/creditCardDate';
+import creditCardNumber from './validations/creditCardNumber';
 
 export default { 
   carPlate,
@@ -37,5 +39,7 @@ export default {
   renavam,
   required,
   age,
-  creditCard
+  creditCard,
+  creditCardDate,
+  creditCardNumber
 }

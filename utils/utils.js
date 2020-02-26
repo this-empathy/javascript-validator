@@ -24,6 +24,27 @@ export default{
     return text.toString().trim().replace(/\s+/g, '')
   },
 
+  luhn10(value){
+    let sum = 0
+    let alt = false
+    let num
+    let i = value.length - 1
+
+    while (i >= 0) {
+      num = parseInt(value.charAt(i), 10)
+      if (alt) {
+        num *= 2
+        if (num > 9) num = (num % 10) + 1
+      }
+
+      alt = !alt
+      sum += num
+      i--
+    }
+
+    return sum % 10 === 0
+  },
+
   _initDict() {
     substitionDict = []
     substitionDict['ã'] = 'a'
