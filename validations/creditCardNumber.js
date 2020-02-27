@@ -1,4 +1,5 @@
 import utils from "../utils/utils";
+import creditCardType from "./creditCardType";
 
 export default (name, value) => {
   const field = {
@@ -13,12 +14,8 @@ export default (name, value) => {
   let card = utils.removeSpecialChars(value)
   card = utils.removeWhiteSpace(card)
 
-  console.log(utils.luhn10(card));
-
-  
-
-  //TODO Get card company
-  // field.company = getCardTypes(card) || field.company = potentialTypes[0]
+  field.valid = utils.luhn10(card)
+  field.company = creditCardType.get(card)[0].type
 
   return field
 }

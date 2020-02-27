@@ -15,8 +15,8 @@ export default{
     return pattern.substring(0, cardNumber.length) === cardNumber.substring(0, pattern.length)
   },
 
-  matches(){
-    if (Array.isArray(pattern)) return matchesRange(cardNumber, pattern[0], pattern[1])
-    return matchesPattern(cardNumber, pattern)
+  matches(cardNumber, pattern){
+    if (Array.isArray(pattern)) return this.matchesRange(cardNumber, pattern[0], pattern[1])
+    return this.matchesPattern(cardNumber, pattern)
   }
 }

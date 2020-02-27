@@ -19,6 +19,7 @@ import age from './validations/age';
 import creditCard from './validations/creditCard';
 import creditCardDate from './validations/creditCardDate';
 import creditCardNumber from './validations/creditCardNumber';
+import creditCardType from './validations/creditCardType';
 
 export default { 
   carPlate,
@@ -41,5 +42,6 @@ export default {
   age,
   creditCard,
   creditCardDate,
-  creditCardNumber
+  creditCardNumber,
+  creditCardType
 }
