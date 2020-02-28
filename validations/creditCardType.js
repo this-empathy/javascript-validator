@@ -2,7 +2,7 @@ import utils from "../utils/utils"
 import matches from '../utils/matches'
 import types from '../utils/card-types'
 
-var cardNames = {
+const cardNames = {
   VISA: 'visa',
   MASTERCARD: 'mastercard',
   AMERICAN_EXPRESS: 'american-express',
@@ -17,7 +17,7 @@ var cardNames = {
   HIPERCARD: 'hipercard'
 };
 
-var ORIGINAL_TEST_ORDER = [
+const ORIGINAL_TEST_ORDER = [
   cardNames.VISA,
   cardNames.MASTERCARD,
   cardNames.AMERICAN_EXPRESS,
@@ -32,7 +32,7 @@ var ORIGINAL_TEST_ORDER = [
   cardNames.HIPERCARD
 ];
 
-var testOrder = utils.clone(ORIGINAL_TEST_ORDER);
+const testOrder = utils.clone(ORIGINAL_TEST_ORDER);
 
 export default{
 
@@ -41,79 +41,55 @@ export default{
   },
   
   getAllCardTypes() {
-    return testOrder.map(function (type) {
-      return clone(findType(type));
-    });
+    return testOrder.map(type => clone(findType(type)))
   },
 
   addMatchingCardsToResults(cardNumber, cardConfiguration, results){
-    var i, pattern, patternLength, clonedCardConfiguration;
+    let i, pattern, patternLength, clonedCardConfiguration;
 
     for (i = 0; i < cardConfiguration.patterns.length; i++) {
       pattern = cardConfiguration.patterns[i];
   
-      if (!matches.matches(cardNumber, pattern)) {
-        continue;
-      }
-  
-      clonedCardConfiguration = utils.clone(cardConfiguration);
-  
+      if (!matches.matches(cardNumber, pattern)) continue
+
+      clonedCardConfiguration = utils.clone(cardConfiguration)
       if (Array.isArray(pattern)) {
-        patternLength = String(pattern[0]).length;
+        patternLength = String(pattern[0]).length
       } else {
-        patternLength = String(pattern).length;
+        patternLength = String(pattern).length
       }
   
-      if (cardNumber.length >= patternLength) {
-        clonedCardConfiguration.matchStrength = patternLength;
-      }
-  
-      results.push(clonedCardConfiguration);
-      break;
+      if (cardNumber.length >= patternLength) clonedCardConfiguration.matchStrength = patternLength
+      results.push(clonedCardConfiguration)
+      break
     }
   },
 
   hasEnoughResultsToDetermineBestMatch(results){
-    var numberOfResultsWithMaxStrengthProperty = results.filter(function (result) {
-      return result.matchStrength;
-    }).length;
-
-    return numberOfResultsWithMaxStrengthProperty > 0 && numberOfResultsWithMaxStrengthProperty === results.length;
+    const numberOfResultsWithMaxStrengthProperty = results.filter(result => result.matchStrength)
+    return numberOfResultsWithMaxStrengthProperty > 0 && numberOfResultsWithMaxStrengthProperty === results.length
   },
 
   findBestMatch(results){
-    if (!this.hasEnoughResultsToDetermineBestMatch(results)) {
-      return;
-    }
-
-    return results.reduce(function (bestMatch, result) {
-      if (!bestMatch) {
-        return result;
-      }
-
-      
-      
-  
-      if (bestMatch.matchStrength < result.matchStrength) {
-        return result;
-      }
-  
+    if (!this.hasEnoughResultsToDetermineBestMatch(results)) return
+    return results.reduce((bestMatch, result) => {
+      if (!bestMatch) return result
+      if (bestMatch.matchStrength < result.matchStrength) return result
       return bestMatch;
     });
   },
 
   get(cardNumber){
-    var bestMatch;
-    var results = [];
+    let bestMatch
+    let results = []
 
-    testOrder.forEach(function (type) {
-      var cardConfiguration = this.findType(type);
-      this.addMatchingCardsToResults(cardNumber, cardConfiguration, results);
-    }.bind(this));
+    testOrder.forEach((type) => {
+      let cardConfiguration = this.findType(type)
+      this.addMatchingCardsToResults(cardNumber, cardConfiguration, results)
+    })
 
-    bestMatch = this.findBestMatch(results);
-
-    if (bestMatch) return [bestMatch];
+    bestMatch = this.findBestMatch(results)
+    if (bestMatch) return [ bestMatch ]
     return results;
   }
 }
