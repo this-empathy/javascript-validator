@@ -16,6 +16,10 @@ import regex from './validations/regex';
 import renavam from './validations/renavam';
 import required from './validations/required';
 import age from './validations/age';
+import creditCard from './validations/creditCard';
+import creditCardDate from './validations/creditCardDate';
+import creditCardNumber from './validations/creditCardNumber';
+import creditCardType from './validations/creditCardType';
 
 export default { 
   carPlate,
@@ -35,5 +39,9 @@ export default {
   regex,
   renavam,
   required,
-  age
+  age,
+  creditCard,
+  creditCardDate,
+  creditCardNumber,
+  creditCardType
 }
