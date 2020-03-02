@@ -140,6 +140,27 @@ Ex: 00000000000
 Validator.renavam(inputName, value)
 ```
 
+##### Brazilian Renavam
+Ex: 00000000000
+
+```javascript
+Validator.renavam(inputName, value)
+```
+
+#### Credit Card Number
+Ex: 0000000000000000
+
+```javascript
+Validator.creditCardNumber(inputName, value)
+```
+
+#### Credit Card Date
+Ex: 00/00 || 00/0000
+
+```javascript
+Validator.creditCardDate(inputName, value)
+```
+
 ##### RegEx
 Ex: `/^[0-9]+$/`
 
