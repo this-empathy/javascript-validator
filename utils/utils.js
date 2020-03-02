@@ -52,7 +52,6 @@ export default{
     if (!originalObject) return null
 
     dupe = JSON.parse(JSON.stringify(originalObject))
-
     return dupe
   },
 

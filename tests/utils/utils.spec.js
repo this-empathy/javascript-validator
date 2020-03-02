@@ -40,4 +40,9 @@ describe('UTILS', () => {
     expect(validFlag).toBe('ABCDEF')
     expect(invalidFlag).toBe('ABCDEF')
   })
+
+  test('Test clone function', () =>{
+    const resultInvalid = utils.clone(null)
+    expect(resultInvalid).toBe(null)
+  })
 });

@@ -39,10 +39,6 @@ export default{
   findType(type) {
     return types[type]
   },
-  
-  getAllCardTypes() {
-    return testOrder.map(type => clone(findType(type)))
-  },
 
   addMatchingCardsToResults(cardNumber, cardConfiguration, results){
     let i, pattern, patternLength, clonedCardConfiguration;
@@ -58,29 +54,14 @@ export default{
       } else {
         patternLength = String(pattern).length
       }
-  
+
       if (cardNumber.length >= patternLength) clonedCardConfiguration.matchStrength = patternLength
       results.push(clonedCardConfiguration)
       break
     }
   },
 
-  hasEnoughResultsToDetermineBestMatch(results){
-    const numberOfResultsWithMaxStrengthProperty = results.filter(result => result.matchStrength)
-    return numberOfResultsWithMaxStrengthProperty > 0 && numberOfResultsWithMaxStrengthProperty === results.length
-  },
-
-  findBestMatch(results){
-    if (!this.hasEnoughResultsToDetermineBestMatch(results)) return
-    return results.reduce((bestMatch, result) => {
-      if (!bestMatch) return result
-      if (bestMatch.matchStrength < result.matchStrength) return result
-      return bestMatch;
-    });
-  },
-
   get(cardNumber){
-    let bestMatch
     let results = []
 
     testOrder.forEach((type) => {
@@ -88,8 +69,6 @@ export default{
       this.addMatchingCardsToResults(cardNumber, cardConfiguration, results)
     })
 
-    bestMatch = this.findBestMatch(results)
-    if (bestMatch) return [ bestMatch ]
     return results;
   }
 }

@@ -1,5 +1,6 @@
 import utils from "../utils/utils";
 import creditCardType from "./creditCardType";
+import isLetter from "./letter";
 
 export default (name, value) => {
   const field = {
@@ -10,6 +11,7 @@ export default (name, value) => {
 
   if (typeof value === 'number') value = String(value)
   if (typeof value !== 'string') return field
+  if (isLetter('Letter', value).valid) return field
   
   let card = utils.removeSpecialChars(value)
   card = utils.removeWhiteSpace(card)
