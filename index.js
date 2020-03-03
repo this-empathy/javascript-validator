@@ -20,6 +20,8 @@ import creditCard from './validations/creditCard';
 import creditCardDate from './validations/creditCardDate';
 import creditCardNumber from './validations/creditCardNumber';
 import creditCardType from './validations/creditCardType';
+import rg from './validations/rg';
+import specialCharacters from './validations/specialCharacters';
 
 export default { 
   carPlate,
@@ -43,5 +45,7 @@ export default {
   creditCard,
   creditCardDate,
   creditCardNumber,
-  creditCardType
+  creditCardType,
+  rg,
+  specialCharacters
 }

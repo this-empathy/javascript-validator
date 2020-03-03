@@ -49,6 +49,13 @@ Ex: 00000000
 Validator.cep(inputName, value)
 ```
 
+##### Brazilian RG
+Ex: 000000000
+
+```javascript
+Validator.rg(inputName, value)
+```
+
 ##### Brazilian CNH
 Ex: 00000000000
 
@@ -124,6 +131,13 @@ Ex: abcdefgABCDEFG
 
 ```javascript
 Validator.letters(inputName, value)
+```
+
+##### Special Characters
+Ex: @@@@####$$$$
+
+```javascript
+Validator.specialCharacters(inputName, value)
 ```
 
 ##### Brazilian Phone
