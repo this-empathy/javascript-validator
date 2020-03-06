@@ -17,7 +17,7 @@ export default (name, value) => {
   card = utils.removeWhiteSpace(card)
 
   field.valid = utils.luhn10(card)
-  field.company = creditCardType.get(card)[0].type
+  field.company = creditCardType.get(card)[0] ? creditCardType.get(card)[0].type : ''
 
   return field
 }
