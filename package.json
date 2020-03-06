@@ -1,6 +1,6 @@
 {
   "name": "@doc88/flux-validator-js",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "A package to validate strings and input data with vanilla js",
   "main": "index.js",
   "scripts": {
