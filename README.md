@@ -1,4 +1,4 @@
-# Flux Validator Js
+# Javascript Validator
 
 A package to validate strings and input data with vanilla js.
 
