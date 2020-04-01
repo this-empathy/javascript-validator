@@ -81,4 +81,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Removed
 
-[0.0.0]: https://github.com/doc88git/flux-validator-js/compare
+[0.0.0]: https://github.com/javascript-validator/compare

@@ -1,5 +1,5 @@
 {
-  "name": "@doc88/flux-validator-js",
+  "name": "javascript-validator",
   "version": "1.5.1",
   "description": "A package to validate strings and input data with vanilla js",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/doc88git/flux-validator-js.git"
+    "url": "git+https://github.com/javascript-validator.git"
   },
   "keywords": [
     "validate",
@@ -23,9 +23,9 @@
   "author": "Lucas Yarid & Giovanni Spolidorio",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/doc88git/flux-validator-js/issues"
+    "url": "https://github.com/javascript-validator/issues"
   },
-  "homepage": "https://github.com/doc88git/flux-validator-js#readme",
+  "homepage": "https://github.com/javascript-validator#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.6.0",
     "jest": "^24.9.0"

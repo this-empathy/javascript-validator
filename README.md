@@ -7,18 +7,18 @@ A package to validate strings and input data with vanilla js.
 ### Install
 Install via npm:
 ```console
-npm install @doc88/flux-validator-js
+npm install javascript-validator
 ```
 
 Install via yarn:
 ```console
-yarn add @doc88/flux-validator-js
+yarn add javascript-validator
 ```
 
 ### How to use
 #### Import
 ```javascript
-import Validator from '@doc88/flux-validator-js'
+import Validator from 'javascript-validator'
 ```
 
 #### Use
