@@ -5,8 +5,7 @@ import validLetter from "./letter";
 export default (name, {number, owner, cvv, date}) => {
   const field = {
     name: name,
-    valid: false,
-    errorType: ''
+    valid: false
   }
 
   return field
