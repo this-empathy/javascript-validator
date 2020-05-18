@@ -3,6 +3,7 @@
   "version": "1.5.2",
   "description": "A package to validate strings and input data with vanilla js",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "jest"
   },
