@@ -7,18 +7,18 @@ A package to validate strings and input data with vanilla js.
 ### Install
 Install via npm:
 ```console
-npm install javascript-validator
+npm install @this-empathy/javascript-validator
 ```
 
 Install via yarn:
 ```console
-yarn add javascript-validator
+yarn add  @this-empathy/javascript-validator
 ```
 
 ### How to use
 #### Import
 ```javascript
-import Validator from 'javascript-validator'
+import Validator from ' @this-empathy/javascript-validator'
 ```
 
 #### Use
