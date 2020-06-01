@@ -32,6 +32,7 @@
     "jest": "^24.9.0"
   },
   "dependencies": {
+    "@this-empathy/locales-patterns": "^1.0.0",
     "np": "^6.1.0"
   }
 }
