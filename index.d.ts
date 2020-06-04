@@ -1,8 +1,9 @@
 declare module "@this-empathy/javascript-validator" {
     export interface res {
-        name: string;
-        valid: boolean;
+        name: string
+        valid: boolean
         company?: string | null
+        message?: string | null
     }
 
     export interface age {

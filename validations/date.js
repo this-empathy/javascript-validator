@@ -1,10 +1,44 @@
-export default (name, value) => {
-  let field = {
-    name: name,
-    valid: false
-  }
+import Locales from '@this-empathy/locales-patterns'
 
-  const re = /^(?:(?:31(\/)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/
-  field.valid = re.test(value)
-  return field
+export default (name, value, locale = 'pt-BR') => {
+	let field = {
+		name: name,
+		valid: false,
+		message: '',
+	}
+
+	locale = locale.replace('-', '_')
+	const pattern = Locales[locale]
+	const literal = /\W|_/g.exec(pattern.dateFormat)[0]
+	const splitedDate = value.split(literal)
+
+	const getMessage = (value) => {
+		value = parseInt(value)
+		return {
+			day: value < 0 || value > 31 ? 'Day is not valid' : field.message,
+			month: value < 0 || value > 12 ? 'Month is not valid' : field.message,
+			year: value < 0 ? 'Year is not valid' : field.message,
+			default: '',
+		}
+	}
+
+	const day = splitedDate[pattern.splitedPositions.day]
+	const month = splitedDate[pattern.splitedPositions.month]
+	const year = splitedDate[pattern.splitedPositions.year]
+
+	field.message = getMessage(day).day
+	field.message = getMessage(month).month
+	field.message = getMessage(year).year
+
+	const completDate =
+		splitedDate.length >= 3 ? new Date(`${month} ${day} ${year}`) : ''
+	const objectType = Object.prototype.toString.call(completDate)
+
+	if (objectType === '[object Date]') {
+		field.valid = !isNaN(completDate.getTime())
+	} else {
+		field.message = 'date is not valid'
+	}
+
+	return field
 }
