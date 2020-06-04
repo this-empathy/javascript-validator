@@ -22,9 +22,9 @@ export default (name, value, locale = 'pt-BR') => {
 		}
 	}
 
-	const day = splitedDate[pattern.splitedPositions.day]
-	const month = splitedDate[pattern.splitedPositions.month]
-	const year = splitedDate[pattern.splitedPositions.year]
+	const day = splitedDate[pattern.dateSplitedPositions.day]
+	const month = splitedDate[pattern.dateSplitedPositions.month]
+	const year = splitedDate[pattern.dateSplitedPositions.year]
 
 	field.message = getMessage(day).day
 	field.message = getMessage(month).month
