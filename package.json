@@ -1,6 +1,6 @@
 {
   "name": "@this-empathy/javascript-validator",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A package to validate strings and input data with vanilla js",
   "main": "index.js",
   "types": "index.d.ts",
