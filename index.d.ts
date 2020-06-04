@@ -25,7 +25,7 @@ declare module '@this-empathy/javascript-validator' {
 	export function cnpj(name: string, value: string): res
 	export function cpf(name: string, value: string): res
 	export function cpfCnpj(name: string, value: string): res
-	export function date(name: string, value: string, locale: string): res
+	export function date(name: string, value: string, locale?: string): res
 	export function email(name: string, value: string): res
 	export function fileSize(files: object, size: number): boolean
 	export function fileType(files: object): boolean
