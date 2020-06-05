@@ -1,4 +1,4 @@
-import validator from '../../index.js'
+import validator from '../../src/index.js'
 
 describe('CPF', () => {
   test('Validates CPF', () => {

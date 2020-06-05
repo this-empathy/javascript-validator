@@ -1,4 +1,4 @@
-import validator from '../../index.js';
+import validator from '../../src/index.js';
 
 describe('CAR Plate', () => {
   test('Validates CAR Plate', () => {

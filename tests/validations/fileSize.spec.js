@@ -1,4 +1,4 @@
-import validator from '../../index.js'
+import validator from '../../src/index.js'
 import helpers from '../helpers/files'
 
 describe('File Size', () => {
