@@ -34,7 +34,7 @@ const ORIGINAL_TEST_ORDER = [
 
 const testOrder = utils.clone(ORIGINAL_TEST_ORDER);
 
-export default{
+export const creditCardType = {
 
   findType(type) {
     return types[type]

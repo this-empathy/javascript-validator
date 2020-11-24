@@ -1,12 +1,13 @@
+import { ValidatorInput, ValidatorReturn } from "../types"
 import utils from "../utils/utils";
 
-export default (name, value) => {
+export const cnpj = (input: ValidatorInput): ValidatorReturn => {
   let field = {
-    name: name,
+    name: input.name,
     valid: false
   }
 
-  let cnpj = utils.removeSpecialChars(value)
+  let cnpj = utils.removeSpecialChars(input.value)
   cnpj = utils.removeWhiteSpace(cnpj)
 
   if (cnpj.length > 14 || cnpj.length < 14) return field

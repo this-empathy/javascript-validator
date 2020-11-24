@@ -1,12 +1,13 @@
+import { ValidatorInput, ValidatorReturn } from "../types"
 import utils from "../utils/utils";
 
-export default (name, value) => {
+export const cpf = (input: ValidatorInput): ValidatorReturn => {
   let field = {
-    name: name,
+    name: input.name,
     valid: false
   }
 
-  let cpf = utils.removeSpecialChars(value)
+  let cpf = utils.removeSpecialChars(input.value)
   cpf = utils.removeWhiteSpace(cpf)
 
   if (cpf.length > 11) return field
