@@ -1,4 +1,4 @@
-import validator from '../../src/index.js';
+import validator from '../../src';
 
 describe('CAR Plate', () => {
   test('Validates CAR Plate', () => {
@@ -25,7 +25,7 @@ describe('CAR Plate', () => {
       'HWP-A478'
     ];
 
-    valid.forEach(value => expect(validator.carPlate('carPlate', value).valid).toBeTruthy());
-    invalid.forEach(value =>expect(validator.carPlate('carPlate', value).valid).toBeFalsy());
+    valid.forEach(value => expect(validator.carPlate({ name: 'carPlate', value }).valid).toBeTruthy());
+    invalid.forEach(value =>expect(validator.carPlate({ name: 'carPlate', value}).valid).toBeFalsy());
   });
 });

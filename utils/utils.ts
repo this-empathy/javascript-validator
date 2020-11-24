@@ -1,5 +1,3 @@
-import cardTypes from '../utils/card-types'
-
 var substitionDict = null
 
 export default{

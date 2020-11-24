@@ -1,15 +1,16 @@
+import { ValidatorInput, ValidatorReturn } from "../types"
 import utils from "../utils/utils";
 
-export default (name, value) => {
+export const carPlate = (input: ValidatorInput): ValidatorReturn => {
   let field = {
-    name: name,
+    name: input.name,
     valid: false
   }
 
   const regexOldPlate = /^[A-Z]{3}\d{4}$/gm;
   const regexNewPlate = /[A-Z]{3}[0-9][A-Z][0-9]{2}/gm;
 
-  let plate = value.replace('-', '')
+  let plate = input.value.replace('-', '')
   plate = utils.removeWhiteSpace(plate)
 
   if (plate.length > 7 || plate.length < 7) return field

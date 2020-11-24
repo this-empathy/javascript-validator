@@ -1,6 +1,18 @@
 import Locales from '@this-empathy/locales-patterns'
 
-export default (name, value, locale = 'pt-BR') => {
+export type ValidatorInputDate = {
+  name?: string
+  value: string
+  locale: string
+}
+
+type ValidatorReturnDate = {
+  name?: string
+  valid: boolean
+  message: string
+}
+
+export const date = ({ name, value, locale = 'pt-BR' }: ValidatorInputDate): ValidatorReturnDate => {
 	let field = {
 		name: name,
 		valid: false,
@@ -28,17 +40,16 @@ export default (name, value, locale = 'pt-BR') => {
 
 	field.message = getMessage(day).day
 	field.message = getMessage(month).month
-	field.message = getMessage(year).year
+  field.message = getMessage(year).year
+  
+  if (splitedDate.length >= 3) {
+    const completeDate = new Date(`${month} ${day} ${year}`)
+    const objectType = Object.prototype.toString.call(completeDate)
 
-	const completDate =
-		splitedDate.length >= 3 ? new Date(`${month} ${day} ${year}`) : ''
-	const objectType = Object.prototype.toString.call(completDate)
-
-	if (objectType === '[object Date]') {
-		field.valid = !isNaN(completDate.getTime())
-	} else {
-		field.message = 'date is not valid'
-	}
+    field.valid = !isNaN(completeDate.getTime())
+  } else {
+    field.message = 'date is not valid'
+  }
 
 	return field
 }

@@ -1,4 +1,4 @@
-import validator from '../../src/index.js'
+import validator from '../../src'
 
 describe('Phone', () => {
   test('Validates Phone', () => {
@@ -14,7 +14,7 @@ describe('Phone', () => {
 
     const invalid = ['11111', '11111111', '11 222-22', '1', 'aaaaa', 119949]
 
-    valid.forEach(value => expect(validator.phone('phone', value).valid).toBeTruthy())
-    invalid.forEach(value => expect(validator.phone('phone', value).valid).toBeFalsy())
+    valid.forEach(value => expect(validator.phone({ name: 'phone', value }).valid).toBeTruthy())
+    invalid.forEach(value => expect(validator.phone({ name: 'phone', value }).valid).toBeFalsy())
   })
 })

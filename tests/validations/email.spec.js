@@ -1,4 +1,4 @@
-import validator from '../../src/index.js'
+import validator from '../../src'
 
 describe('Email', () => {
   test('Validates Email', () => {
@@ -24,7 +24,7 @@ describe('Email', () => {
     ]
 
 
-    valid.forEach(value => expect(validator.email('email', value).valid).toBeTruthy())
-    invalid.forEach(value => expect(validator.email('email', value).valid).toBeFalsy())
+    valid.forEach(value => expect(validator.email({ name: 'email', value }).valid).toBeTruthy())
+    invalid.forEach(value => expect(validator.email({ name: 'email', value }).valid).toBeFalsy())
   })
 })

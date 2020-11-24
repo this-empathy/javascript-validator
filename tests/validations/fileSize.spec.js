@@ -1,25 +1,25 @@
-import validator from '../../src/index.js'
-import helpers from '../helpers/files'
+import validator from '../../src'
+import { file } from '../helpers/file'
 
 describe('File Size', () => {
   test('validates file size', () => {
     const size = 15
     expect(
-      validator.fileSize(helpers.file('file.txt', 'text/plain', 10), size)
+      validator.fileSize({ files: file('file.txt', 'text/plain', 10), size }).valid
     ).toBeTruthy()
     expect(
-      validator.fileSize(helpers.file('file.txt', 'text/plain', 15), size)
+      validator.fileSize({ files: file('file.txt', 'text/plain', 15), size }).valid
     ).toBeTruthy()
 
     expect(
-      validator.fileSize(helpers.file('file.txt', 'text/plain', 19), size)
+      validator.fileSize({ files: file('file.txt', 'text/plain', 19), size }).valid
     ).toBeFalsy()
     expect(
-      validator.fileSize(helpers.file('file.txt', 'text/plain', 16), size)
+      validator.fileSize({ files: file('file.txt', 'text/plain', 16), size }).valid
     ).toBeFalsy()
 
     expect(
-      validator.fileSize(helpers.file('file.txt', 'text/plain', 16), 'not a number')
+      validator.fileSize({ files: file('file.txt', 'text/plain', 16), size: 'not a number' }).valid
     ).toBeFalsy()
   })
 })

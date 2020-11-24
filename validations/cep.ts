@@ -1,11 +1,12 @@
+import { ValidatorInput, ValidatorReturn } from "../types"
 import utils from "../utils/utils";
 
-export default (name, value) => {
+export const cep = (input: ValidatorInput): ValidatorReturn => {
   let field = {
-    name: name,
+    name: input.name,
     valid: false
   }
-  let cep = utils.removeWhiteSpace(value)
+  let cep = utils.removeWhiteSpace(input.value)
   const hasNoChar = /\D/g;
   
   if (hasNoChar.test(cep)) {

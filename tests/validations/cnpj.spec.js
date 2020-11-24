@@ -1,4 +1,4 @@
-import validator from '../../src/index.js'
+import validator from '../../src'
 
 describe('CNPJ', () => {
   test('Validates CNPJ', () => {
@@ -21,7 +21,7 @@ describe('CNPJ', () => {
       '087/'
     ]
 
-    valid.forEach(value => expect(validator.cnpj('cnpj', value).valid).toBeTruthy())
-    invalid.forEach(value => expect(validator.cnpj('cnpj', value).valid).toBeFalsy())
+    valid.forEach(value => expect(validator.cnpj({ name: 'cnpj', value }).valid).toBeTruthy())
+    invalid.forEach(value => expect(validator.cnpj({ name: 'cnpj', value }).valid).toBeFalsy())
   })
 })
