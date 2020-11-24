@@ -1,5 +1,5 @@
-import { ValidatorReturn } from "../types"
-import utils from "../utils/utils";
+import { ValidatorReturn } from '../types'
+import utils from '../utils/utils'
 
 export type ValidatorInputEmail = {
   name?: string
@@ -7,20 +7,20 @@ export type ValidatorInputEmail = {
 }
 
 export const required = (input: ValidatorInputEmail): ValidatorReturn => {
-  let field = {
-    name: input.name,
-    valid: false
-  }
+    const field = {
+        name: input.name,
+        valid: false
+    }
 
-  if (utils.isNullOrUndefined(input.value)) {
-    return field
-  }
+    if (utils.isNullOrUndefined(input.value)) {
+        return field
+    }
   
-  // incase a field considers `false` as an empty value like checkboxes.
-  if (input.value === false) {
-    return field
-  }
+    // incase a field considers `false` as an empty value like checkboxes.
+    if (input.value === false) {
+        return field
+    }
 
-  field.valid = !!String(input.value).trim().length
-  return field
+    field.valid = !!String(input.value).trim().length
+    return field
 }
