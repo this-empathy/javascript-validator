@@ -1,4 +1,4 @@
-import validator from '../../src/index.js'
+import validator from '../../src'
 
 describe('CPF', () => {
   test('Validates CPF', () => {
@@ -13,7 +13,7 @@ describe('CPF', () => {
 
     const invalid = ['11111111111', '00000000000', '094.521.', '094', '415.882.118-50']
 
-    valid.forEach(value => expect(validator.cpf('cpf', value).valid).toBeTruthy())
-    invalid.forEach(value => expect(validator.cpf('cpf', value).valid).toBeFalsy())
+    valid.forEach(value => expect(validator.cpf({ name: 'cpf', value }).valid).toBeTruthy())
+    invalid.forEach(value => expect(validator.cpf({ name: 'cpf', value }).valid).toBeFalsy())
   })
 })

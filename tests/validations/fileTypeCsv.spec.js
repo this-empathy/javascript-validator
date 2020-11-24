@@ -1,13 +1,13 @@
-import validator from '../../src/index.js'
-import helpers from '../helpers/files'
+import validator from '../../src'
+import { file } from '../helpers/file'
 
 describe('file type', () => {
   test('validates image files', () => {
     const validFiles = [
-      helpers.file('file.csv', 'text/csv')
+      file('file.csv', 'text/csv')
     ]
 
     validFiles.forEach(value => expect(validator.fileTypeCsv(value)).toBeTruthy())
-    expect(validator.fileTypeCsv(helpers.file('file.pdf', 'application/pdf'))).toBeFalsy()
+    expect(validator.fileTypeCsv(file('file.pdf', 'application/pdf'))).toBeFalsy()
   })
 })
