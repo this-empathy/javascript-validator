@@ -1,4 +1,4 @@
-import { ValidatorReturn } from "../types"
+import { ValidatorReturn } from '../types'
 
 export type ValidatorInputFileSize = {
   name?: string
@@ -7,14 +7,14 @@ export type ValidatorInputFileSize = {
 }
 
 export const fileSize = (input: ValidatorInputFileSize): ValidatorReturn => {
-  let field = {
-    name: input.name,
-    valid: false
-  }
+    const field = {
+        name: input.name,
+        valid: false
+    }
 
-  if (isNaN(input.size)) return field
+    if (isNaN(input.size)) return field
 
-  const nSize = input.size * 1024
-  field.valid = input.files.size <= nSize
-  return field
+    const nSize = input.size * 1024
+    field.valid = input.files.size <= nSize
+    return field
 }

@@ -1,4 +1,4 @@
-import { ValidatorReturn } from "../types"
+import { ValidatorReturn } from '../types'
 
 export type ValidatorInput = {
   name?: string
@@ -7,12 +7,12 @@ export type ValidatorInput = {
 }
 
 export const regex = (input: ValidatorInput): ValidatorReturn => {
-  var re = new RegExp(input.regex,'g')
-  let field = {
-    name: input.name,
-    valid: false
-  }
+    const re = new RegExp(input.regex,'g')
+    const field = {
+        name: input.name,
+        valid: false
+    }
 
-  field.valid = re.test(String(input.value))
-  return field
+    field.valid = re.test(String(input.value))
+    return field
 }
